@@ -47,8 +47,10 @@ const NoteForm = () => {
         onChange={(e) => setContent(e.target.value)}
         value={content}
       />
-      <button>Add Note</button>
+
+      <button>ADD NOTE</button>
       {error && <div className="error">{error}</div>}
+
     </form>
   );
 };
