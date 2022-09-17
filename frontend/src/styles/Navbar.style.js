@@ -21,7 +21,7 @@ export const NavbarInnerContainer = styled.div`
   width: 100%;
   height: 120px;
   display: flex;
-  max-width: 1400px;
+ 
 `;
 
 export const LeftContainer = styled.div`
@@ -35,7 +35,8 @@ export const RightContainer = styled.div`
   display: flex;
   flex: 30%;
   justify-content: flex-end;
-  padding-right: 50px;
+  padding-right: 5%;
+  
 `;
 
 

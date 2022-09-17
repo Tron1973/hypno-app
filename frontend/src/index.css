@@ -9,7 +9,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: futura, sans-serif;
-  max-width: 1400px;
 }
 header {
   background: var(--primary);
