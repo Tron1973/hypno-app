@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+export const NavbarBackground = styled.div`
+  background-color: #46C3D3;
+  width: 100vw;
+`;
+
 export const NavbarContainer = styled.nav`
    width: 100%;
    height: ${(props) => (props.MobileMenu ? "100vh" : "120px")};
@@ -16,6 +21,7 @@ export const NavbarInnerContainer = styled.div`
   width: 100%;
   height: 120px;
   display: flex;
+  max-width: 1400px;
 `;
 
 export const LeftContainer = styled.div`

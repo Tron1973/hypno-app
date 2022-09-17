@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { NavbarContainer, LeftContainer, RightContainer, NavbarInnerContainer, MobileMenu, NavbarLinkContainer, NavbarLink, NavbarLinkMobile, Logo, MenuButton } from '../styles/Navbar.style';
+import { NavbarBackground, NavbarContainer, LeftContainer, RightContainer, NavbarInnerContainer, MobileMenu, NavbarLinkContainer, NavbarLink, NavbarLinkMobile, Logo, MenuButton } from '../styles/Navbar.style';
 import LogoImg from '../assets/HypnoLogo.png';
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
+    <NavbarBackground>
     <NavbarContainer mobileMenu={ mobileMenu } >
       <NavbarInnerContainer>
 
@@ -36,6 +37,7 @@ const Navbar = () => {
       </MobileMenu>
       )}
     </NavbarContainer>
+    </NavbarBackground>
   );
 };
 

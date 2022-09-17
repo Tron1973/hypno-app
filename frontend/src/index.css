@@ -9,6 +9,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: futura, sans-serif;
+  max-width: 1400px;
 }
 header {
   background: var(--primary);
@@ -22,6 +23,7 @@ header .container {
   align-items: center;
   justify-content: space-between;
 }
+
 header a {
   color: #fff;
   text-decoration: none;
