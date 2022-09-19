@@ -6,6 +6,7 @@ const NoteForm = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [error, setError] = useState(null);
+  const [emptyFields, setEmptyFields] = useState([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,11 +24,13 @@ const NoteForm = () => {
 
     if (!response.ok) {
       setError(json.error);
+      setEmptyFields(json.emptyFields);
     };
     if (response.ok) {
       setTitle('');
       setContent('');
       setError(null);
+      setEmptyFields([]);
       console.log('new note added', json);
       dispatch({ type: 'CREATE_NOTE', payload: json })
     };
@@ -42,6 +45,7 @@ const NoteForm = () => {
         type="text"
         onChange={(e) => setTitle(e.target.value)}
         value={title}
+        className={emptyFields.includes('title') ? 'error' : '' }
       />
 
       <label>Note Content:</label>
@@ -49,6 +53,7 @@ const NoteForm = () => {
         type="text"
         onChange={(e) => setContent(e.target.value)}
         value={content}
+        className={emptyFields.includes('content') ? 'error' : '' }
       />
 
       <button>ADD NOTE</button>
