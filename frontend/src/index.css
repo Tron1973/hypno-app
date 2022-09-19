@@ -48,12 +48,12 @@ header a {
 }
 .note-details h4 {
   margin: 0 0 10px 0;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   color: var(--primary);
 }
 .note-details p {
   margin: 0 0 10px 0;
-  font-size: 0.9em;
+  font-size: 1rem;
   color: #555;
 }
 .note-details span {
@@ -61,7 +61,6 @@ header a {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  background: #ededed;
   padding: 6px;
   border-radius: 50%;
   color: #333;
@@ -78,9 +77,11 @@ header a {
 .create h3 {
   margin-top: 0px;
   color:#46C3D3;
+  font-size: 1.2rem;
 }
 label, input {
   display: block;
+  font-size: 1rem;
 }
 input {
   padding: 10px;
@@ -97,6 +98,7 @@ form button {
   color: #fff;
   padding: 10px;
   font-family: futura, sans-serif;
+  font-size: 14px;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -110,4 +112,9 @@ div.error {
 }
 input.error {
   border: 1.5px solid var(--error);
+}
+.trash {
+  color: #46C3D3;
+  height: 1.5rem;
+  width: auto;
 }

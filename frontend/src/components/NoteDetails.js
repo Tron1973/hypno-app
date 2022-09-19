@@ -1,4 +1,6 @@
 import { useNotesContext } from '../hooks/useNotesContext';
+import { FaTrash } from 'react-icons/fa';
+import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 
 const NoteDetails = ({ note }) => {
   const { dispatch } = useNotesContext();
@@ -18,8 +20,8 @@ const NoteDetails = ({ note }) => {
     <div className="note-details">
       <h4>{ note.title }</h4>
       <p>{ note.content }</p>
-      <p>{ note.createdAt }</p>
-      <span onClick={handleClick}>delete</span>
+      <p>{ formatDistanceToNow(new Date(note.createdAt), { addSuffix: true }) }</p>
+      <span onClick={handleClick}><FaTrash className='trash'/></span>
     </div>
   )
 };
