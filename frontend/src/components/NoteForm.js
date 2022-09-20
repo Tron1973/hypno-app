@@ -53,7 +53,7 @@ const NoteForm = () => {
         type="text"
         onChange={(e) => setContent(e.target.value)}
         value={content}
-        className={emptyFields.includes('content') ? 'error' : '' }
+        className={emptyFields.includes('content') ? 'error' : ''}
       />
 
       <button>ADD NOTE</button>

@@ -44,7 +44,7 @@ header a {
   margin: 20px auto;
   padding: 20px;
   position: relative;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
 }
 .note-details h4 {
   margin: 0 0 10px 0;
@@ -72,7 +72,7 @@ header a {
   margin-top: 20px;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
 }
 .create h3 {
   margin-top: 0px;
