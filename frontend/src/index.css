@@ -1,6 +1,7 @@
 /* BASIC STYLES */
 :root {
-  --primary: #46C3D3;
+  --primary: #46c3d3;
+  --hover: #1e656e;
   --error: #d70303;
 }
 body {
@@ -102,6 +103,10 @@ form button {
   border-radius: 10px;
   cursor: pointer;
 }
+form button:hover {
+  background-color: var(--hover);
+  transition: all 0.3s;
+}
 div.error {
   padding: 10px;
   background: #fed5d5;
@@ -117,4 +122,18 @@ input.error {
   color: #46C3D3;
   height: 1.5rem;
   width: auto;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 720px) {
+  .home {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+  .trash {
+    color: #46C3D3;
+    height: 1.2rem;
+    width: auto;
+  }
 }
