@@ -1,23 +1,23 @@
-import { useEffect } from 'react';
-import NoteDetails from '../components/NoteDetails';
-import NoteForm from '../components/NoteForm';
-import { useNotesContext } from '../hooks/useNotesContext';
+import { useEffect } from 'react'
+import NoteDetails from '../components/NoteDetails'
+import NoteForm from '../components/NoteForm'
+import { useNotesContext } from '../hooks/useNotesContext'
 
 const Home = () => {
-  const { notes, dispatch } = useNotesContext();
+  const { notes, dispatch } = useNotesContext()
 
   useEffect(() => {
     const fetchNotes = async () => {
-      const response = await fetch('/api/notes');
-      const json = await response.json();
+      const response = await fetch('/api/notes')
+      const json = await response.json()
 
       if (response.ok) {
         dispatch({ type: 'SET_NOTES', payload: json })
-      };
-    };
+      }
+    }
 
-    fetchNotes();
-  }, [dispatch]);
+    fetchNotes()
+  }, [dispatch])
 
   return (
     <div className="home">
@@ -28,7 +28,7 @@ const Home = () => {
       </div>
       <NoteForm />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

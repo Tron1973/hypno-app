@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { NavbarBackground, NavbarContainer, LeftContainer, RightContainer, NavbarInnerContainer, MobileMenu, NavbarLinkContainer, NavbarLink, NavbarLinkMobile, Logo, MenuButton } from '../styles/Navbar.style';
-import LogoImg from '../assets/HypnoLogo.png';
+import React, { useState } from 'react'
+import { NavbarBackground, NavbarContainer, LeftContainer, RightContainer, NavbarInnerContainer, MobileMenu, NavbarLinkContainer, NavbarLink, NavbarLinkMobile, Logo, MenuButton } from '../styles/Navbar.style'
+import LogoImg from '../assets/HypnoLogo.png'
 
 const Navbar = () => {
-  const [mobileMenu, setMobileMenu] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false)
 
   return (
     <NavbarBackground>
@@ -42,4 +42,4 @@ const Navbar = () => {
 };
 
 
-export default Navbar;
+export default Navbar

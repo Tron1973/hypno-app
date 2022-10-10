@@ -1,9 +1,9 @@
-import { useNotesContext } from '../hooks/useNotesContext';
-import { FaTrash } from 'react-icons/fa';
-import formatDistanceToNow from 'date-fns/formatDistanceToNow';
+import { useNotesContext } from '../hooks/useNotesContext'
+import { FaTrash } from 'react-icons/fa'
+import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
 const NoteDetails = ({ note }) => {
-  const { dispatch } = useNotesContext();
+  const { dispatch } = useNotesContext()
 
   const handleClick = async () => {
     const response = await fetch('/api/notes/' + note._id, {
@@ -26,4 +26,4 @@ const NoteDetails = ({ note }) => {
   )
 };
 
-export default NoteDetails;
+export default NoteDetails

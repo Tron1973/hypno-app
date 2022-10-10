@@ -1,17 +1,17 @@
-import { useState } from "react";
-import { useNotesContext } from '../hooks/useNotesContext';
+import { useState } from "react"
+import { useNotesContext } from '../hooks/useNotesContext'
 
 const NoteForm = () => {
-  const { dispatch } = useNotesContext();
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const [error, setError] = useState(null);
-  const [emptyFields, setEmptyFields] = useState([]);
+  const { dispatch } = useNotesContext()
+  const [title, setTitle] = useState('')
+  const [content, setContent] = useState('')
+  const [error, setError] = useState(null)
+  const [emptyFields, setEmptyFields] = useState([])
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    const note = { title, content };
+    const note = { title, content }
 
     const response = await fetch('/api/notes', {
       method: 'POST',
@@ -19,22 +19,22 @@ const NoteForm = () => {
       headers: {
         'Content-Type': 'application/json'
       }
-    });
+    })
     const json = await response.json();
 
     if (!response.ok) {
-      setError(json.error);
-      setEmptyFields(json.emptyFields);
-    };
+      setError(json.error)
+      setEmptyFields(json.emptyFields)
+    }
     if (response.ok) {
-      setTitle('');
-      setContent('');
-      setError(null);
-      setEmptyFields([]);
-      console.log('new note added', json);
+      setTitle('')
+      setContent('')
+      setError(null)
+      setEmptyFields([])
+      console.log('new note added', json)
       dispatch({ type: 'CREATE_NOTE', payload: json })
-    };
-  };
+    }
+  }
 
   return (
     <form className="create" onSubmit={(handleSubmit)} >
@@ -60,7 +60,7 @@ const NoteForm = () => {
       {error && <div className="error">{error}</div>}
 
     </form>
-  );
-};
+  )
+}
 
-export default NoteForm;
+export default NoteForm
