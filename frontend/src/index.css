@@ -123,6 +123,9 @@ input.error {
   height: 1.5rem;
   width: auto;
 }
+.trash:hover {
+  color: var(--hover);
+}
 
 /* MOBILE STYLES */
 @media (max-width: 720px) {

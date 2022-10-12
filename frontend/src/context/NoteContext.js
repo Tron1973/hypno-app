@@ -1,6 +1,6 @@
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useReducer } from "react"
 
-export const NotesContext = createContext();
+export const NotesContext = createContext()
 
 export const notesReducer = (state, action) => {
   switch (action.type) {
@@ -17,18 +17,18 @@ export const notesReducer = (state, action) => {
           notes: state.notes.filter((note) => note._id !== action.payload._id)
         }
     default:
-      return state;
+      return state
   }
 }
 
 export const NotesContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(notesReducer, {
     notes: null
-  });
+  })
 
   return (
     <NotesContext.Provider value={{ ...state, dispatch }}>
       { children }
     </NotesContext.Provider>
-  );
+  )
 }
