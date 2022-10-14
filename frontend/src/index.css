@@ -126,6 +126,16 @@ input.error {
 .trash:hover {
   color: var(--hover);
 }
+/* LOGIN AND SIGNUP FORMS */
+form.signup,
+form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+}
 
 /* MOBILE STYLES */
 @media (max-width: 720px) {

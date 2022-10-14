@@ -19,8 +19,8 @@ const Navbar = () => {
 
       <RightContainer>
         <NavbarLinkContainer>
-        <NavbarLink to='/home'>Home</NavbarLink>
-        <NavbarLink to='/about'>About</NavbarLink>
+        <NavbarLink to='/login'>Login</NavbarLink>
+        <NavbarLink to='/signup'>Signup</NavbarLink>
         <MenuButton onClick={() => {
           setMobileMenu((toggle) => !toggle);}}>
           { mobileMenu ? <>&#10005;</> : <>&#8801;</>}
@@ -32,8 +32,8 @@ const Navbar = () => {
       { mobileMenu && (
       <MobileMenu>
         <NavbarLinkMobile to='/'>Hypno App</NavbarLinkMobile>
-        <NavbarLinkMobile to='/about'>About</NavbarLinkMobile>
-        <NavbarLinkMobile to='/#'>Claireified Healing Arts Main Site</NavbarLinkMobile>
+        <NavbarLinkMobile to='/login'>Login</NavbarLinkMobile>
+        <NavbarLinkMobile to='/signup'>Signup</NavbarLinkMobile>
       </MobileMenu>
       )}
     </NavbarContainer>
