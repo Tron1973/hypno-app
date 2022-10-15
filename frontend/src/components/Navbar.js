@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 import { NavbarBackground, NavbarContainer, LeftContainer, RightContainer, NavbarInnerContainer, MobileMenu, NavbarLinkContainer, NavbarLink, NavbarLinkMobile, Logo, MenuButton } from '../styles/Navbar.style'
 import LogoImg from '../assets/HypnoLogo.png'
+import { useLogout } from '../hooks/useLogout'
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false)
+  const { logout } = useLogout()
+  const handleClick = () => {
+    logout()
+  }
 
   return (
     <NavbarBackground>
@@ -19,6 +24,9 @@ const Navbar = () => {
 
       <RightContainer>
         <NavbarLinkContainer>
+          <div>
+            <button onClick={handleClick}>Log Out</button>
+          </div>
         <NavbarLink to='/login'>Login</NavbarLink>
         <NavbarLink to='/signup'>Signup</NavbarLink>
         <MenuButton onClick={() => {

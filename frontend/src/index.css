@@ -33,6 +33,19 @@ header a {
   padding: 20px;
   margin: 0 auto;
 }
+
+
+nav button {
+  background: #fff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-family: futura, sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 /* HOME PAGE STYLES */
 .home {
   display: grid;
@@ -126,6 +139,7 @@ input.error {
 .trash:hover {
   color: var(--hover);
 }
+
 /* LOGIN AND SIGNUP FORMS */
 form.signup,
 form.login {
@@ -150,3 +164,4 @@ form.login {
     width: auto;
   }
 }
+
