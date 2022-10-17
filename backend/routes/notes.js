@@ -5,8 +5,12 @@ const { getNotes,
         deleteNote,
         updateNote
 } = require('../controllers/noteController')
+const requireAuth = require('../middleware/requireAuth')
 
 const router = express.Router()
+
+// MIDDLEWARE AUTHORIZATION TO PROTECT ROUTES
+router.use(requireAuth)
 
 // GET ALL NOTES
 router.get('/', getNotes)
