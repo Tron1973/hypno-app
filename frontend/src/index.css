@@ -34,11 +34,15 @@ header a {
   margin: 0 auto;
 }
 
+.email {
+  font-size: 1rem;
+}
 
 nav button {
   background: #fff;
   color: var(--primary);
   border: 2px solid var(--primary);
+  margin-left: 10px;
   padding: 6px 10px;
   border-radius: 10px;
   font-family: futura, sans-serif;
@@ -163,5 +167,9 @@ form.login {
     height: 1.2rem;
     width: auto;
   }
-}
+  nav button {
+    font-size: .75rem;
+  }
 
+
+}
