@@ -28,6 +28,7 @@ header a {
   color: #fff;
   text-decoration: none;
 }
+
 .pages {
   max-width: 1400px;
   padding: 20px;
@@ -48,6 +49,11 @@ nav button {
   font-family: futura, sans-serif;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.nav-links:hover {
+  color: #ffff00;
+  transition: all .7s;
 }
 
 /* HOME PAGE STYLES */

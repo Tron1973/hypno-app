@@ -34,8 +34,8 @@ const Navbar = () => {
         )}
         { !user && (
           <>
-          <NavbarLink to='/login'>Login</NavbarLink>
-          <NavbarLink to='/signup'>Signup</NavbarLink>
+          <NavbarLink to='/login' className='nav-links'>Login</NavbarLink>
+          <NavbarLink to='/signup' className='nav-links'>Signup</NavbarLink>
           <MenuButton onClick={() => {
             setMobileMenu((toggle) => !toggle);}}>
             { mobileMenu ? <>&#10005;</> : <>&#8801;</>}
