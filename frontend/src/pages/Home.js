@@ -28,14 +28,15 @@ const Home = () => {
   }, [dispatch, user])
 
   return (
-    <div className="home">
-      <div className='notes'>
+    <main className="home">
+      <section className='notes'>
         { notes && notes.map((note) => (
           <NoteDetails key={note._id} note={note} />
         )) }
-      </div>
+      </section>
       <NoteForm />
-    </div>
+      <a href="https://www.claireifiedhealingarts.com"><p>return to Claireified Healing Arts</p></a>
+    </main>
   )
 }
 
