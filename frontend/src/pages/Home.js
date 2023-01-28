@@ -3,6 +3,7 @@ import NoteDetails from '../components/NoteDetails'
 import NoteForm from '../components/NoteForm'
 import { useNotesContext } from '../hooks/useNotesContext'
 import { useAuthContext } from '../hooks/useAuthContext'
+import { BsFillArrowLeftSquareFill } from 'react-icons/bs'
 
 const Home = () => {
   const { notes, dispatch } = useNotesContext()
@@ -35,7 +36,10 @@ const Home = () => {
         )) }
       </section>
       <NoteForm />
-      <a href="https://www.claireifiedhealingarts.com"><p>return to Claireified Healing Arts</p></a>
+      <div className='back-to-home'>
+        <BsFillArrowLeftSquareFill className='back-arrow' />
+        <a href="https://www.claireifiedhealingarts.com" className='back-home'><p>return to Claireified Healing Arts</p></a>
+      </div>
     </main>
   )
 }

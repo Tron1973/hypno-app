@@ -155,6 +155,28 @@ input.error {
   color: var(--hover);
 }
 
+.back-to-home {
+  display: inline-flex;
+  align-items: center;
+}
+
+.back-arrow {
+  font-size: 2rem;
+  color:#46C3D3;
+  margin-right: 1rem;
+}
+
+.back-home {
+  font-size: 1.5rem;
+  color: #46C3D3;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.back-home:hover {
+  color:#1e656e;
+}
+
 /* LOGIN AND SIGNUP FORMS */
 form.signup,
 form.login {
